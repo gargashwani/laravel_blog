@@ -30,6 +30,9 @@ class AdminLoginController extends Controller
      */
     public function __construct()
     {
+        // if you want to login one user role at a time, 
+        // than pass both guards in the middleware to check
+        // else pass only the required one
     $this->middleware(['guest:admin','guest:web'])->except('logout');
     }
     /**
@@ -54,12 +57,12 @@ class AdminLoginController extends Controller
         );
     }
 
-    // public function logout(Request $request)
-    // {
-    //     $this->guard()->logout();
-    //     //$request->session()->invalidate();
-    //     return redirect('/');
-    // }
+    public function logout(Request $request)
+    {
+        $this->guard()->logout();
+        //$request->session()->invalidate();
+        return redirect('/');
+    }
 
     /**
      * Get the guard to be used during authentication.
