@@ -34,6 +34,10 @@ class LoginController extends Controller
      */
     public function __construct()
     {
+        // if you want to login one user role at a time, 
+        // than pass both guards in the middleware to check
+        // else pass only the required one
+
         $this->middleware(['guest:web','guest:admin'])->except('logout');
     }
 

@@ -13,9 +13,11 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware(['auth:web']);
+        // Find auth middleware in app/kernel.php
+        // Its RedirectIfAuthenticated.php
+        // So, here, we are sending guard as web in the auth middleware
 
-        
+        $this->middleware(['auth:web']);
     }
 
     /**
