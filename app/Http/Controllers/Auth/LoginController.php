@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -38,10 +39,9 @@ class LoginController extends Controller
         // than pass both guards in the middleware to check
         // else pass only the required one
 
-        $this->middleware(['guest:web','guest:admin'])->except('logout');
+        $this->middleware('guest:web')->except('logout');
     }
-
-    public function logout()
+    public function logout(Request $request)
     {
         $this->guard()->logout();
         return redirect('/');
