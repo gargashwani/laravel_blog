@@ -41,7 +41,7 @@ class LoginController extends Controller
         $this->middleware(['guest:web','guest:admin'])->except('logout');
     }
 
-    public function logout(Request $request)
+    public function logout()
     {
         $this->guard()->logout();
         return redirect('/');
