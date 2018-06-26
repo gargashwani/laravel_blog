@@ -7,6 +7,16 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+## About This Project
+This project is based on Laravel 5.6 and I have used Laravel's core authentication to verify both users and admins middleware and guards. I have made this project using Laravel's documentation and its example, some features may be out of it. This is just a Basic CMS for , where a user can create a company, and company can create a project. And Comments are also possible on projects.
+
+This is just the begining. I'll try to add as many featues possible in a CMS.
+
+This project is pure Open Source.
+
+This project is open-sourced software licensed under the MIT license
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
